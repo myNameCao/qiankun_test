@@ -7,10 +7,16 @@
  **/
 const common = [
   {
-    path: '/login',
+    path: 'login',
     name: 'Login',
     meta: { title: 'Login', requireAuth: false },
     component: () => import('@view/common/login.vue')
+  },
+  {
+    path: '/*',
+    name: 'home',
+    meta: { title: 'home', requireAuth: false },
+    component: () => import('@view/common/home.vue')
   },
   {
     path: '/404',
